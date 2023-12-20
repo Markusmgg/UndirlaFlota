@@ -4,9 +4,19 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class UndirlaFlota extends JFrame {
-
+	/**
+	 * La clase UndirlaFlota representa la ventana principal de la aplicación,
+	 * que sirve como menú para seleccionar el modo de juego.
+	 * Extiende la clase JFrame y utiliza la biblioteca Swing para la interfaz gráfica.
+	 *
+	 * @author Marcos Martín
+	 */
     private JFrame frame;
-
+    /**
+     * Método principal que inicia la aplicación y muestra la ventana principal.
+     *
+     * @param args Los argumentos de la línea de comandos.
+     */
     public static void main(String[] args) {
         EventQueue.invokeLater(() -> {
             try {
@@ -17,16 +27,20 @@ public class UndirlaFlota extends JFrame {
             }
         });
     }
-
+    /**
+     * Constructor de la clase UndirlaFlota. Inicializa la interfaz gráfica llamando al método initialize().
+     */
     public UndirlaFlota() {
         initialize();
     }
-
+    /**
+     * Inicializa la interfaz gráfica de la ventana principal con etiquetas, botones y diseños.
+     */
     private void initialize() {
         frame = new JFrame();
         frame.setBounds(100, 100, 450, 300);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
+        frame.setBackground(look.BACKGROUND_COLOR);
         JLabel lblNewLabel = new JLabel("Undir la flota");
         lblNewLabel.setFont(look.TITLE_FONT);
         lblNewLabel.setForeground(look.LABEL_TEXT_COLOR);
